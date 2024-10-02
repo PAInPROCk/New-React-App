@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Intern Assignment</h1>
+
+      <div className="signup-form">
+        <form>
+          <input type="text" placeholder="Username" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="Phone Number" />
+          <button type="submit">Signup</button>
+        </form>
+      </div>
+
+      <div className="login-form">
+        <form>
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <div className="orders-list">
+        <h2>Orders List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Status</th>
+              <th>Payment Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* Add rows here dynamically */}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
